@@ -212,6 +212,7 @@ public class CDCollection extends javax.swing.JFrame {
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void displayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayButtonActionPerformed
+        // displays the original and sorted orders to a text area
         outputResult.setText("Original Order" + "\n");
         for (int i = 0; i < cds.size(); i++)  {
             outputResult.setText(outputResult.getText()  + cds.get(i) + "\n");
@@ -225,6 +226,7 @@ public class CDCollection extends javax.swing.JFrame {
 
 
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
+        // checks to see if the cd is in the collection before removing.
         int index = Collections.binarySearch(cds, inputCD.getText());
         if (index > -1) {
             cds.remove(inputCD.getText());
